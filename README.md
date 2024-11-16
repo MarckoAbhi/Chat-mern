@@ -1,6 +1,6 @@
 # Clone the repositary
 
-git clone https://github.com/MarckoAbhi/Chat-docker-k8s.git
+git clone https://github.com/MarckoAbhi/Chat-mern.git
 
 # Navigate to backend folder and install dependencies:
 
