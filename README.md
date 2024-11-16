@@ -24,7 +24,7 @@ cd ..
 
 PORT=4002
 
-MONGODB_URI=mongodb+srv://<your mongodb user >:<your passwoed>@cluster0.tyt0d.mongodb.net/<your database name>?retryWrites=true&w=majority&appName=Cluster0
+MONGODB_URI=mongodb+srv://<your_mongodb_user >:<your -passwoed>@cluster0.tyt0d.mongodb.net/<your_database_name>?retryWrites=true&w=majority&appName=Cluster0
 
 JWT_TOKEN=
 
