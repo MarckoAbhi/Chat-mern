@@ -18,7 +18,7 @@ coverage/
 
 # Local configuration files
 *.local
-.env
+env
 .env.local
 
 # Editor directories and files
