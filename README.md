@@ -19,8 +19,7 @@ cd ..
 
 # Environment Variable 
 
-## in backend directory create a .env file 
-## and write this code to there 
+## in backend directory create a .env file and write this code to there 
 
 PORT=4002
 
@@ -52,9 +51,7 @@ npm start
 
 npm run dev
 
-
 ## open your browser and go to http://localhost:3001
-
 ## server is running on http://localhost:4002
 
 
