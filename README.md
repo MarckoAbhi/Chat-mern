@@ -44,12 +44,12 @@ openssl rand -base64 32
 cd Backend
 npm start
 
-###For frontend
+### For frontend
 
 npm run dev
 
 ### Open your browser and go to http://localhost:3001
-###Server is running on http://localhost:4002
+### Server is running on http://localhost:4002
 
 ## Acknowledgement
 React.js
@@ -62,23 +62,23 @@ cd Frontend
 npm run build
 cd.. 
 
-###In root directory run this cmd 
+### In root directory run this cmd 
 docker build -t your docker username :v1 -f Fackend/Dockerfile .
 docker build -t your docker username :v1 -f Backend/Dockerfile .
 
-###To push your image on docker hub run this cmd
+### To push your image on docker hub run this cmd
 docker push your username -backend:v1 
 docker pushyour username -fackend:v1
 
-###Like this- docker push marckostar7321/chat-app-backend:v1 
-##Compose up 
+### Like this- docker push marckostar7321/chat-app-backend:v1 
+## Compose up 
 docker-compose up --build   
 docker-compose down
 
-###To run docker frontend image and backend image -
+### To run docker frontend image and backend image -
 
 docker run -p 3001:80 marckostar7321/chat-app-frontend:v1
 docker run --env-file ./Backend/.env -p 4002:4002 marckostar7321/chat-app-backend:v1
 
-###Open your browser and go to http://localhost:3001
-###Server is running on http://localhost:4002
+### Open your browser and go to http://localhost:3001
+### Server is running on http://localhost:4002
