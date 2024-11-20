@@ -36,7 +36,7 @@ JWT_TOKEN=
 
 openssl rand -base64 32 
 
-##Now you find yor JWT TOKEN Copy and paste it in your .env file
+## Now you find yor JWT TOKEN Copy and paste it in your .env file
 
 ## Running Application 
 ### For Backend
@@ -78,6 +78,7 @@ docker-compose down
 ### To run docker frontend image and backend image -
 
 docker run -p 3001:80 marckostar7321/chat-app-frontend:v1
+
 docker run --env-file ./Backend/.env -p 4002:4002 marckostar7321/chat-app-backend:v1
 
 ### Open your browser and go to http://localhost:3001
