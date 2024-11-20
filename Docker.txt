@@ -80,3 +80,5 @@ docker-compose down
  docker run -p 3001:80 marckostar7321/chat-app-frontend:v1
 
  docker run --env-file ./Backend/.env -p 4002:4002 marckostar7321/chat-app-backend:v1
+
+kubectl create secret generic backend-env --from-literal=MONGODB_URI="mongodb+srv://MarckoAbhi:password@cluster0.tyt0d.mongodb.net/AKChat?retryWrites=true&w=majority&appName=Cluster0" --from-literal=JWT_TOKEN= --from-literal=PORT=4002
