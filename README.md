@@ -18,8 +18,7 @@ cd ..
   npm install
 
 # Environment Variable 
-
-## in backend directory create a .env file and write this code to there 
+## In backend directory create a .env file and write this code to there 
 
 PORT=4002
 
@@ -30,17 +29,17 @@ JWT_TOKEN=
 ## To create your own database going to mongodb compass and login there after login you create a new project .
 ## After that create deployment and now create cluster 
 ## After creating cluster click on connect and click on driver 
-## there you can see your monogoDB url , copy and paste in your env file MONGODB_URI= 
+## There you can see your monogoDB url , copy and paste in your env file MONGODB_URI= 
 
 ## To find JWT_TOKEN you can click on dropdown button at + button in your vs code terminal and click on Git Bash
 ## Now you type this CMD
 
 openssl rand -base64 32 
 
-# now you find yor JWT TOKEN Copy and paste it in your .env file
+# Now you find yor JWT TOKEN Copy and paste it in your .env file
 
 #  Running Application 
-## for Backend
+## For Backend
 
 cd Backend
 npm start
@@ -49,8 +48,8 @@ npm start
 
 npm run dev
 
-## open your browser and go to http://localhost:3001
-## server is running on http://localhost:4002
+## Open your browser and go to http://localhost:3001
+## Server is running on http://localhost:4002
 
 # Acknowledgement
 React.js
@@ -58,7 +57,7 @@ Node.js
 MongoDB
 Socket.io
 
-# to creating Docker image Run these CMD- 
+# To creating Docker image Run these CMD- 
 cd Frontend
 npm run build
 cd.. 
@@ -71,8 +70,8 @@ docker build -t your docker username :v1 -f Backend/Dockerfile .
 docker push your username -backend:v1 
 docker pushyour username -fackend:v1
 
-###like this- docker push marckostar7321/chat-app-backend:v1 
-##compose up 
+###Like this- docker push marckostar7321/chat-app-backend:v1 
+##Compose up 
 docker-compose up --build   
 docker-compose down
 
@@ -81,5 +80,5 @@ docker-compose down
 docker run -p 3001:80 marckostar7321/chat-app-frontend:v1
 docker run --env-file ./Backend/.env -p 4002:4002 marckostar7321/chat-app-backend:v1
 
-## open your browser and go to http://localhost:3001
-## server is running on http://localhost:4002
+## Open your browser and go to http://localhost:3001
+## Server is running on http://localhost:4002
