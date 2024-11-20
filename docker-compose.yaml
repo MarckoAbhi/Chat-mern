@@ -1,32 +1,25 @@
-version: "1.0"
+version: '3'
 services:
-  mongodb:
-    image: "mongo"
-    volumes:
-      - data:/data/db
   backend:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: Backend/Dockerfile
+    env_file:
+      - Backend/.env
     ports:
       - "4002:4002"
-    volumes:
-      - logs:/app/logs
-      - ./backend:/app
-      - /app/node_modules
-    depends_on:
-      - mongodb
+    networks:
+      - chat-app-network
 
   frontend:
-    build: ./frontend
+    build:
+      context: .
+      dockerfile: Frontend/Dockerfile
     ports:
-      - "3001:3001"
-    volumes:
-      - ./frontend/src:/app/src
-    stdin_open: true
-    tty: true
-    depends_on:
-      - backend
-volumes:
-  data:
-  logs:
-      
-    
+      - "3001:80"
+    networks:
+      - chat-app-network
+
+networks:
+  chat-app-network:
+    driver: bridge
