@@ -27,7 +27,6 @@ MONGODB_URI=mongodb+srv://<your_mongodb_user >:<your -passwoed>@cluster0.tyt0d.m
 
 JWT_TOKEN=
 
-
 ## To create your own database going to mongodb compass and login there after login you create a new project .
 ## After that create deployment and now create cluster 
 ## After creating cluster click on connect and click on driver 
@@ -44,7 +43,6 @@ openssl rand -base64 32
 ## for Backend
 
 cd Backend
-
 npm start
 
 ## For frontend
@@ -54,13 +52,34 @@ npm run dev
 ## open your browser and go to http://localhost:3001
 ## server is running on http://localhost:4002
 
-
 # Acknowledgement
-
 React.js
-
 Node.js
-
 MongoDB
-
 Socket.io
+
+# to creating Docker image Run these CMD- 
+cd Frontend
+npm run build
+cd.. 
+
+# In root directory run this cmd 
+docker build -t your docker username :v1 -f Fackend/Dockerfile .
+docker build -t your docker username :v1 -f Backend/Dockerfile .
+
+# To push your image on docker hub run this cmd
+docker push your username -backend:v1 
+docker pushyour username -fackend:v1
+
+###like this- docker push marckostar7321/chat-app-backend:v1 
+##compose up 
+docker-compose up --build   
+docker-compose down
+
+##To run docker frontend image and backend image -
+
+docker run -p 3001:80 marckostar7321/chat-app-frontend:v1
+docker run --env-file ./Backend/.env -p 4002:4002 marckostar7321/chat-app-backend:v1
+
+## open your browser and go to http://localhost:3001
+## server is running on http://localhost:4002
